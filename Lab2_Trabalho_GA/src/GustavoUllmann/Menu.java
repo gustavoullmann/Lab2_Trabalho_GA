@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class Menu {
 	
+	static Scanner input = new Scanner(System.in);
+	
 	public static void menu() {
 		
-		Scanner input = new Scanner(System.in);
 		boolean userOption = true;
 		int option = 0;
 		
@@ -29,8 +30,8 @@ public class Menu {
 			
 			} catch(java.util.InputMismatchException e) {
 					
-					System.out.println("Opção inválida! Digite um número entre 1 e 6!");
-					menu();						
+				System.out.println("Opção inválida! Digite um número entre 1 e 6!");
+				menu();						
 			
 			} if(option < 1 || option >= 7) {
 				
@@ -39,6 +40,8 @@ public class Menu {
 				menu();
 		
 			} else if(option == 1) {
+				
+				subMenu1();
 								
 			} else if(option == 2) {
 				
@@ -54,5 +57,49 @@ public class Menu {
 			}
 		}
 		input.close();
+	}
+
+	public static void subMenu1() {
+		
+		boolean userOption = true;
+		int option = 0;
+		
+		while (userOption) {
+			
+			System.out.println("Escolha o tipo de produto que deseja cadastrar:" + "\n");
+			
+			System.out.println("\t" + "1 - Óleo Lubrificante");
+			System.out.println("\t" + "2 - Filtros");
+			System.out.println("\t" + "3 - Pastilhas de freio");
+			System.out.println("\t" + "4 - Voltar ao menu principal" + "\n");
+			
+			System.out.println("Digite o número da opção desejada: ");
+				
+			try {
+				
+				option = input.nextInt();	
+			
+			} catch(java.util.InputMismatchException e) {
+					
+				System.out.println("Opção inválida! Digite um número entre 1 e 4!");
+				subMenu1();						
+			
+			} if(option < 1 || option >= 5) {
+				
+				System.out.println("Opção inválida! Digite um número entre 1 e 4!");
+				userOption = false;
+				subMenu1();
+		
+			} else if(option == 1) {
+		
+			} else if(option == 2) {
+				
+			} else if(option == 3) {
+				
+			} else if(option == 4) {
+				
+				menu();
+			}
+		}
 	}
 }

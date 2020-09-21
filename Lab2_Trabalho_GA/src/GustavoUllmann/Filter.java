@@ -6,8 +6,8 @@ package GustavoUllmann;
 	private String type;  
 	private String partNumber;
 	
-	public Filter(int barCode, String country, String brand, String type, String partNumber) {
-		super(barCode, country);
+	public Filter(int barCode, String country, int quantity, String brand, String type, String partNumber) {
+		super(barCode, country, quantity);
 		this.brand = brand;
 		this.type = type;
 		this.partNumber = partNumber;
@@ -41,6 +41,7 @@ package GustavoUllmann;
 	public String toString() {
 		return "Código de barra: " + super.getBarCode() + "\n" +
 				"País de origem: " + super.getOriginCoutry() + "\n" +
+				"Quantidade em estoque: " + super.getQuantity() + "\n" +
 				"Data de inclusão: " + super.getTimeStampInclusion() + "\n" +
 				"Marca: " + brand + "\n" +
 				"Tipo: " + type + "\n" +

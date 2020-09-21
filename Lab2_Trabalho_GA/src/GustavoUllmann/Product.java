@@ -6,13 +6,15 @@ public abstract class Product {
 	
 	private int barCode;
 	private String originCoutry;
+	private int quantity;
 	private Date dateOfInclusion;
 	
 	
-	public Product(int barCode, String country) {
+	public Product(int barCode, String country, int quantity) {
 		
 		this.barCode = barCode;
 		this.originCoutry = country;
+		this.quantity = quantity;
 		this.dateOfInclusion = generateTimeStamp();
 	}
 	
@@ -32,6 +34,14 @@ public abstract class Product {
 		this.originCoutry = country;
 	}
 	
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
 	public Date getTimeStampInclusion( ) {
 		return dateOfInclusion;
 	}
@@ -50,6 +60,7 @@ public abstract class Product {
 	public String toString() {
 		return "Código de barra: " + barCode + "\n" +
 				"País de origem: " + originCoutry + "\n" +
+				"Quantidade em estoque: " + quantity + "\n" +
 				"Data de inclusão: " + dateOfInclusion;
 	}	
 }

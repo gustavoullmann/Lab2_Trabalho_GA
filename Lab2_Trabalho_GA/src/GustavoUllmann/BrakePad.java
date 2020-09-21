@@ -7,8 +7,8 @@ public class BrakePad extends Product {
 	private String axis;  
 	private String partNumber;
 
-	public BrakePad(int barCode, String country, String brand, String material, String axis, String partNumber) {
-		super(barCode, country);
+	public BrakePad(int barCode, String country, int quantity, String brand, String material, String axis, String partNumber) {
+		super(barCode, country, quantity);
 		this.brand = brand;
 		this.material = material;
 		this.axis = axis;
@@ -51,6 +51,7 @@ public class BrakePad extends Product {
 	public String toString() {
 		return "Código de barra: " + super.getBarCode() + "\n" +
 				"País de origem: " + super.getOriginCoutry() + "\n" +
+				"Quantidade em estoque: " + super.getQuantity() + "\n" +
 				"Data de inclusão: " + super.getTimeStampInclusion() + "\n" +
 				"Marca: " + brand + "\n" +
 				"Material: " + material + "\n" +

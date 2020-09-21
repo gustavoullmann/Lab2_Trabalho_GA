@@ -6,8 +6,8 @@ public class Lubricant extends Product{
 	private String viscosity;  
 	private int quantityMilliliters;
 	
-	public Lubricant(int barCode, String country, String brand, String viscosity, int quantityMilliliters) {
-		super(barCode, country);
+	public Lubricant(int barCode, String country, int quantity, String brand, String viscosity, int quantityMilliliters) {
+		super(barCode, country, quantity);
 		this.brand = brand;
 		this.viscosity = viscosity;
 		this.quantityMilliliters = quantityMilliliters;
@@ -41,6 +41,7 @@ public class Lubricant extends Product{
 	public String toString() {
 		return "Código de barra: " + super.getBarCode() + "\n" +
 				"País de origem: " + super.getOriginCoutry() + "\n" +
+				"Quantidade em estoque: " + super.getQuantity() + "\n" +
 				"Data de inclusão: " + super.getTimeStampInclusion() + "\n" +
 				"Fabricante: " + brand + "\n" +
 				"Viscosidade: " + viscosity + "\n" +
