@@ -10,7 +10,7 @@ public class Menu {
 		boolean userOption = true;
 		int option = 0;
 		
-		while(userOption) {
+		while (userOption) {
 			
 			System.out.println("Escolha a opção desejada no menu abaixo:" + "\n");
 			
@@ -23,20 +23,34 @@ public class Menu {
 			
 			System.out.println("Digite o número da opção desejada: ");
 				
-				try {
-					
-					option = input.nextInt();	
+			try {
 				
-				}catch(java.util.InputMismatchException e) {
-						
-						System.out.println("Opção inválida! Digite um número entre 1 e 6!");
-						menu();						
-				
-				}if(option < 1 || option >= 7) {
+				option = input.nextInt();	
+			
+			} catch(java.util.InputMismatchException e) {
 					
 					System.out.println("Opção inválida! Digite um número entre 1 e 6!");
-					userOption = false;
-					menu();
+					menu();						
+			
+			} if(option < 1 || option >= 7) {
+				
+				System.out.println("Opção inválida! Digite um número entre 1 e 6!");
+				userOption = false;
+				menu();
+		
+			} else if(option == 1) {
+								
+			} else if(option == 2) {
+				
+			} else if(option == 3) {
+				
+			} else if(option == 4) {
+				
+			} else if(option == 5) {
+				
+			} else {
+				System.out.println("O programa foi finalizado!");
+				System.exit(0);
 			}
 		}
 		input.close();
