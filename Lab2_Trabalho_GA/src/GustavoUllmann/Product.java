@@ -2,7 +2,7 @@ package GustavoUllmann;
 
 import java.util.Date;
 
-public class Product {
+public abstract class Product {
 	
 	private int barCode;
 	private String originCoutry;
