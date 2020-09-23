@@ -46,6 +46,19 @@ public class BrakePad extends Product {
 	public void setPartNumber(String partNumber) {
 		this.partNumber = partNumber;
 	}
+	
+	public String brakePadInfoWriter() {
+		
+		String brakePadInfo = super.getBarCode() + ";" +
+								super.getOriginCoutry() + ";" +
+								super.getQuantity() + ";" +
+								super.getTimeStampInclusion() + ";" +
+								brand + ";" +
+								material + ";" +
+								axis + ";" +
+								partNumber;
+		return brakePadInfo;
+	}
 
 	@Override
 	public String toString() {

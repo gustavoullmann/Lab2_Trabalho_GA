@@ -36,6 +36,18 @@ package GustavoUllmann;
 	public void setPartNumber(String partNumber) {
 		this.partNumber = partNumber;
 	}
+	
+	public String filterInfoWriter() {
+		
+		String filterInfo = super.getBarCode() + ";" +
+								super.getOriginCoutry() + ";" +
+								super.getQuantity() + ";" +
+								super.getTimeStampInclusion() + ";" +
+								brand + ";" +
+								type + ";" +
+								partNumber;
+		return filterInfo;
+	}
 
 	@Override
 	public String toString() {

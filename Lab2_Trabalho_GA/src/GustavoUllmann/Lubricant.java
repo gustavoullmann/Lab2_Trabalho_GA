@@ -36,6 +36,18 @@ public class Lubricant extends Product{
 	public void setQuantityMilliliters(int quantityMilliliters) {
 		this.quantityMilliliters = quantityMilliliters;
 	}
+	
+	public String lubricantInfoWriter() {
+		
+		String lubricantInfo = super.getBarCode() + ";" +
+								super.getOriginCoutry() + ";" +
+								super.getQuantity() + ";" +
+								super.getTimeStampInclusion() + ";" +
+								brand + ";" +
+								viscosity + ";" +
+								quantityMilliliters;
+		return lubricantInfo;
+	}
 
 	@Override
 	public String toString() {
